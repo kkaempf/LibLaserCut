@@ -35,7 +35,7 @@ public class FloatMinMaxPowerSpeedFrequencyProperty extends FloatPowerSpeedFocus
 
   public FloatMinMaxPowerSpeedFrequencyProperty()
   {
-    super();
+    super(true); /* hide focus */
   }
 
   public FloatMinMaxPowerSpeedFrequencyProperty(LaserProperty o)
