@@ -55,6 +55,7 @@ public class LibInfo
       Marlin.class,
       FullSpectrumCutter.class,
       LaserToolsTechnicsCutter.class,
+      Ruida.class,
       K40NanoDriver.class
     );
   }
