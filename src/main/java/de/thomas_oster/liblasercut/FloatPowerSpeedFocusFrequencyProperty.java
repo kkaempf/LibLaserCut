@@ -31,12 +31,18 @@ public class FloatPowerSpeedFocusFrequencyProperty implements LaserProperty
   private float speed = 100;
   private float focus = 0;
   private int frequency = 500;
+  private boolean hideFocus = false;
 
   public FloatPowerSpeedFocusFrequencyProperty()
   {
   }
 
-  /**
+  public FloatPowerSpeedFocusFrequencyProperty(boolean hideFocus)
+  {
+      this.hideFocus = hideFocus;
+  }
+
+ /**
    * Sets the Laserpower. Valid values are from 0 to 100.
    * In 3d-Raster mode, the intensity is scaled to this power setting
    */
@@ -110,15 +116,21 @@ public class FloatPowerSpeedFocusFrequencyProperty implements LaserProperty
     p.frequency = frequency;
     p.power = power;
     p.speed = speed;
+    p.hideFocus = hideFocus;
     return p;
   }
 
-  private static final String[] propertyNames = new String[]{"power", "speed", "focus", "frequency"};
+  private static String[] propertyNames = new String[]{"power", "speed", "focus", "frequency"};
+  private static String[] propertyNamesNoFocus = new String[]{"power", "speed", "frequency"};
   
   @Override
   public String[] getPropertyKeys()
   {
-    return propertyNames;
+    if (hideFocus) {
+      return propertyNamesNoFocus;
+    } else {
+      return propertyNames;
+    }
   }
 
   @Override
