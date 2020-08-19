@@ -31,7 +31,11 @@ import java.util.LinkedList;
 public class FloatPowerSpeedFocusFrequencyProperty extends FloatPowerSpeedFocusProperty
 {
   private static final String FREQUENCY = "frequency";
-  private int frequency = 0;
+  private float power = 0;
+  private float speed = 100;
+  private float focus = 0;
+  private int frequency = 500;
+  private boolean hideFocus;
 
   public FloatPowerSpeedFocusFrequencyProperty()
   {

@@ -329,7 +329,7 @@ public class Ruida extends LaserCutter
 
       if ((p instanceof RasterPart) || (p instanceof Raster3dPart))
       {
-        p = convertRasterizableToVectorPart((RasterizableJobPart)p, p.getDPI(), this.useBidirectionalRastering);
+        p = convertRasterizableToVectorPart((RasterizableJobPart)p, job, this.useBidirectionalRastering, true, true);
       }
       /* FALLTHRU */
       if (p instanceof VectorPart)
