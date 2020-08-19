@@ -104,8 +104,8 @@ public class FloatPowerSpeedFocusProperty extends FloatPowerSpeedProperty
     else
     {
       LinkedList<String> result = new LinkedList<String>();
-      result.add(FOCUS);
       result.addAll(Arrays.asList(super.getPropertyKeys()));
+      result.add(FOCUS);
       return result.toArray(new String[0]);  
     }
   }

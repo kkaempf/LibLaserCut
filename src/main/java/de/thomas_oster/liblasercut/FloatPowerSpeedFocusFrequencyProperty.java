@@ -108,8 +108,8 @@ public class FloatPowerSpeedFocusFrequencyProperty extends FloatPowerSpeedFocusP
   public String[] getPropertyKeys()
   {
     LinkedList<String> result = new LinkedList<String>();
-    result.add(FREQUENCY);
     result.addAll(Arrays.asList(super.getPropertyKeys()));
+    result.add(FREQUENCY);
     return result.toArray(new String[0]);  
   }
 
